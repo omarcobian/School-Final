@@ -1,0 +1,33 @@
+header{
+    background-color: black;
+}
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+nav{
+    position: absolute;
+    top: 60px;
+    right: 0;
+
+}
+.imagen{
+    width: 125px;
+    height: 125px;
+}
+nav li{
+    display: inline;/*Acomodar en linea*/
+    margin: 0 0 0 15px /*Separar palabras*/
+}
+nav a{
+    text-transform: uppercase;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+nav a:hover{
+    /*color: ;*/
+    text-decoration: underline;
+}
