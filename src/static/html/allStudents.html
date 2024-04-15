@@ -24,6 +24,24 @@
 
 <div class="container">
     <h1>Tabla de Estudiantes</h1>
+
+    <!-- Agrega campos de entrada para filtrar -->
+    <div class="mb-3">
+        <label for="inputID" class="form-label">ID:</label>
+        <input type="text" class="form-control" id="inputID">
+    </div>
+    <div class="mb-3">
+        <label for="inputNombre" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="inputNombre">
+    </div>
+    <div class="mb-3">
+        <label for="inputApellido" class="form-label">Apellido:</label>
+        <input type="text" class="form-control" id="inputApellido">
+    </div>
+
+    <!-- Agrega un botón para filtrar -->
+    <button type="button" id="btnFiltrar" class="btn btn-primary">Filtrar</button>
+
     <table class="table">
         <thead>
             <tr>
@@ -39,9 +57,7 @@
             </tr>
         </thead>
         <tbody id="talumnos">
-            <tr>
-                
-            </tr>
+            <!-- Los estudiantes se cargarán aquí -->
         </tbody>
     </table>
 </div>
