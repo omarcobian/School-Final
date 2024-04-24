@@ -32,5 +32,20 @@ router.get('/allTeacher', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'static', 'html', 'allTeacher.html'));
 });
 
+//Ruta para mostrar el archivo HTML de la pagina de los cursos
+router.get('/allCourse', (req, res) =>{
+    res.sendFile(path.join(__dirname, '..', 'static', 'html', 'allCourse.html'));
+});
+
+//Ruta para cargar el archivo HTML para crear un curso
+router.get('/home/course', (req, res) =>{
+    res.sendFile(path.join(__dirname, '..', 'static', 'html', 'createCourse.html'));
+});
+
+//Ruta para cargar el join
+router.get('/allstudentcourses', (req, res) =>{
+    res.sendFile(path.join(__dirname,  '..', 'static', 'html', 'allstudentcourses.html'))
+});
+
 module.exports = router;
 

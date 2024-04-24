@@ -67,6 +67,22 @@ function renderTeachers(teachers) {
             tableBody.appendChild(row);
         });
     } else {
+        const row = document.createElement('tr');
+            row.innerHTML =`
+                <td>${teachers.id_teacher}</td>
+                <td>${teachers.name}</td>
+                <td>${teachers.lastname}</td>
+                <td>${teachers.birthday}</td>
+                <td>${teachers.email}</td>
+                <td>${teachers.phonenumber}</td>
+                <td>${teachers.specialty}</td>
+                <td>
+                    <button type="button" class="btn btn-success" onclick="editTeacher(${teachers.id_teacher})">Editar</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteTeacher(${teachers.id_teacher})">Eliminar</button>
+                </td>
+            `;
+            row.setAttribute("id",teachers.id_teacher);
+            tableBody.appendChild(row);
         console.log('No se encontraron maestros.');
     }
 }
