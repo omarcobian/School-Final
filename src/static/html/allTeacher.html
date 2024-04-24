@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Teachers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../ccs/style.css">
+
+</head>
+<body>
+    <header>
+        <div class="caja">
+            <h1><img class="imagen" src="../img/logo-sige.png"></h1>
+            <nav>
+                <ul>
+                    <li class="opciones"><a href="/">Home</a></li>
+                    <li class="opciones"><a href="/home/teacher">Register</a></li>
+                    <li class="opciones"><a href="#">Table</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Table Teachers</h1>
+    
+        <!-- Agrega campos de entrada para filtrar -->
+        <div class="mb-3">
+            <label for="inputID" class="form-label">ID:</label>
+            <input type="text" class="form-control" id="inputID">
+        </div>
+        <div class="mb-3">
+            <label for="inputName" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="inputName">
+        </div>
+        <div class="mb-3">
+            <label for="inputLastName" class="form-label">Last Name:</label>
+            <input type="text" class="form-control" id="inputLastName">
+        </div>
+    
+        <!-- Agrega un botón para filtrar -->
+        <button type="button" id="btnFiltrar" class="btn btn-primary" onclick="loadFilteredTeacher()">Filtrar</button>
+    
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Email</th>
+                    <th>Número de Teléfono</th>
+                    <th>Especialidad</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody id="tteacher">
+                <!-- Los estudiantes se cargarán aquí -->
+            </tbody>
+        </table>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/allTeacher.js"></script>
+</body>
+</html>

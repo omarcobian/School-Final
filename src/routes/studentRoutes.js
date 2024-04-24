@@ -10,7 +10,10 @@ router.get('/api/students', studentController.getAllStudents);
 router.get('/api/students/:id', studentController.getStudentById);
 
 // Obtener estudiantes por nombre
-router.get('/api/students/search/:nombre', studentController.findStudentByName);
+router.get('/api/students/searchbyname/:nombre', studentController.findStudentByName);
+
+//Obtener estudiantes por apellido
+router.get('/api/students/searchbylastname/:apellido', studentController.findStudentByLastName);
 
 // Crear un nuevo estudiante
 router.post('/api/students', studentController.createStudent);

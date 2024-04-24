@@ -53,7 +53,21 @@ exports.findStudentByName = async (req, res) => {
     }
 };
 
-
+//Controlador para obtener estudiantes por apellido
+exports.findStudentByLastName = async (req, res) => {
+    const { apellido } = req.params; // Usar req.params en lugar de req.query
+    try {
+        const estudiantes = await Student.findAll({
+            where: {
+                lastname: apellido
+            }
+        });
+        res.json(estudiantes);
+    } catch (error) {
+        console.error('Error al obtener estudiantes por apellido:', error);
+        res.status(500).json({ message: 'Ocurrió un error al obtener estudiantes por apellido' });
+    }
+};
 
 // Controlador para actualizar un estudiante existente
 exports.updateStudent = async (req, res) => {

@@ -14,16 +14,16 @@
             <h1><img class="imagen" src="../img/logo-sige.png"></h1>
             <nav>
                 <ul>
-                    <li class="opciones"><a href="#">Home</a></li>
-                    <li class="opciones"><a href="http://localhost:3000/home/students">Registro</a></li>
-                    <li class="opciones"><a href="#">Tabla</a></li>
+                    <li class="opciones"><a href="/">Home</a></li>
+                    <li class="opciones"><a href="/home/students">Register</a></li>
+                    <li class="opciones"><a href="#">Table</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
 <div class="container">
-    <h1>Tabla de Estudiantes</h1>
+    <h1>Table Students</h1>
 
     <!-- Agrega campos de entrada para filtrar -->
     <div class="mb-3">
@@ -31,16 +31,16 @@
         <input type="text" class="form-control" id="inputID">
     </div>
     <div class="mb-3">
-        <label for="inputNombre" class="form-label">Nombre:</label>
+        <label for="inputNombre" class="form-label">Name:</label>
         <input type="text" class="form-control" id="inputNombre">
     </div>
     <div class="mb-3">
-        <label for="inputApellido" class="form-label">Apellido:</label>
+        <label for="inputApellido" class="form-label">Last Name:</label>
         <input type="text" class="form-control" id="inputApellido">
     </div>
 
     <!-- Agrega un botón para filtrar -->
-    <button type="button" id="btnFiltrar" class="btn btn-primary">Filtrar</button>
+    <button type="button" id="btnFiltrar" class="btn btn-primary" onclick="loadFilteredStudents()">Filtrar</button>
 
     <table class="table">
         <thead>

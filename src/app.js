@@ -12,6 +12,7 @@ app.use(express.static(path.join(__dirname, 'static')));
 //routes
 app.use(require('./routes/studentRoutes'));
 app.use(require('./routes/vistaRoutes'));
+app.use(require('./routes/teacherRoutes'));
 
 app.listen(3000);
 console.log('Server On Port 3000');
